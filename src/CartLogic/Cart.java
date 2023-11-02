@@ -55,9 +55,10 @@ public class Cart {
     public void addCartItem(CartItem cartItem){
         if(cartItems.contains(cartItem)){
             cartItem.setQuantity(cartItem.getQuantity() + 1);
-            this.setQuantity(this.getQuantity() + 1);
+            setQuantity(this.getQuantity() + 1);
         } else {
             cartItems.add(cartItem);
+            setQuantity(this.getQuantity() + cartItem.getQuantity());
         }
         this.setPrice(this.getPrice() + cartItem.getPrice());
     }

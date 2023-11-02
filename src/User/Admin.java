@@ -25,12 +25,12 @@ public final class Admin extends User {
 
     public void traverseCustomers(){
         for(Customer customer : data.getCustomers()){
-            System.out.print(customer.getName() + " " + customer.getCartQty() + " ");
+            System.out.print(customer.getName() + " " + customer.getCart().getQuantity() + " ");
         }
     }
 
     public void sortCustomersByCartQty(){
-        Comparator <Customer> cartQty = Comparator.comparingInt(Customer::getCartQty);
+        Comparator <Customer> cartQty = Comparator.comparingInt(customer -> customer.getCart().getQuantity());
         Collections.sort(data.getCustomers(),cartQty);
     }
 

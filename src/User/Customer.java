@@ -18,10 +18,6 @@ public class Customer extends User{
         this.cart = cart;
     }
 
-    public Integer getCartQty(){
-        return this.getCart().getCartItems().size();
-    }
-
     public void showCartContents() {
         for (CartItem item : this.cart.getCartItems()) {
             System.out.println(this.getName() + " has " + item.getQuantity() + " units of " + item.getName());
