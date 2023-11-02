@@ -3,6 +3,8 @@ package User;
 import Data.Data;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public final class Admin extends User {
 
@@ -17,11 +19,22 @@ public final class Admin extends User {
         data.getCustomers().add(customer);
     }
 
+    public void removeCustomer(Customer customer){
+        data.getCustomers().remove(customer);
+    }
+
     public void traverseCustomers(){
         for(Customer customer : data.getCustomers()){
-            System.out.println(customer.getName());
+            System.out.print(customer.getName() + " " + customer.getCartQty() + " ");
         }
     }
+
+    public void sortCustomersByCartQty(){
+        Comparator <Customer> cartQty = Comparator.comparingInt(Customer::getCartQty);
+        Collections.sort(data.getCustomers(),cartQty);
+    }
+
+
 
 
 }

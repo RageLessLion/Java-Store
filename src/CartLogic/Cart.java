@@ -11,9 +11,11 @@ public class Cart {
 
     private Integer quantity;
 
-    private Float price;
+    private Integer price;
 
     public Cart(){
+        quantity = 0;
+        price = 0;
         cartItems = new ArrayList<>();
         allCarts.add(this);
     }
@@ -30,11 +32,11 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    public Float getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
