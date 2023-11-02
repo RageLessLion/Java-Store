@@ -1,6 +1,7 @@
 package User;
 
 import Data.Data;
+import Enum.UserStatus;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +11,7 @@ public final class Admin extends User {
 
     private final Data data;
 
-    public Admin(String status, String name, Data data){
+    public Admin(UserStatus status, String name, Data data){
         super(status,name);
         this.data = data;
     }

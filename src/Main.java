@@ -6,16 +6,17 @@ import User.User;
 import User.Customer;
 import Data.Data;
 import User.Admin;
+import Enum.UserStatus;
 
 public class Main {
     public static void main(String[] args) {
         Data data  = new Data();
-        Admin admin = new Admin("admin","administrator",data);
+        Admin admin = new Admin(UserStatus.ADMIN,"administrator",data);
         String section = "users";
         switch (section) {
             case "users":
                 //todo: use enum for status
-                Customer customer1 = new Customer("customer","client1");
+                Customer customer1 = new Customer(UserStatus.CUSTOMER,"client1");
                 admin.addCustomer(customer1);
                 Product product1 = new Product("product1",20,10);
                 CartItem cartItem1 = new CartItem(product1,5);
@@ -27,22 +28,11 @@ public class Main {
                 customer1.setCart(cart);
 
 
-
-
-                Customer customer2 = new Customer("customer","client2");
+                Customer customer2 = new Customer(UserStatus.CUSTOMER,"client2");
                 admin.addCustomer(customer2);
                 Cart cart2 = new Cart();
                 cart2.addCartItem(cartItem1);
                 customer2.setCart(cart2);
-
-
-//                Customer customer3 = new Customer("customer","client3");
-//                admin.addCustomer(customer3);
-//                Cart cart3 = new Cart();
-//                cart2.addCartItem(cartItem2);
-//                customer3.setCart(cart2);
-//                customer1.showCartContents();
-//                customer2.showCartContents();
 
                 admin.sortCustomersByCartQty();
                 admin.traverseCustomers();

@@ -2,9 +2,10 @@ package User;
 
 import CartLogic.Cart;
 import CartLogic.CartItem;
+import Enum.UserStatus;
 
 public class Customer extends User{
-    public Customer(String status,String name){
+    public Customer(UserStatus status,String name){
         super(status,name);
     }
 

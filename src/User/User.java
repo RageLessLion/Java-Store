@@ -3,13 +3,14 @@ package User;
 import java.util.ArrayList;
 import CartLogic.Cart;
 import CartLogic.CartItem;
+import Enum.UserStatus;
 
 public class User {
     private String name;
 
-    private String status;
+    private UserStatus status;
 
-    public User(String status,String name){
+    public User(UserStatus status, String name){
         this.name = name;
         this.status = status;
     }
@@ -22,11 +23,11 @@ public class User {
         this.name = name;
     }
 
-    public String getStatus() {
+    public UserStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(UserStatus status) {
         this.status = status;
     }
 }
