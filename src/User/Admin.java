@@ -2,6 +2,8 @@ package User;
 
 import Data.Data;
 import Enum.UserStatus;
+import CartLogic.Cart;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,6 +20,10 @@ public final class Admin extends User {
 
     public void addCustomer(Customer customer) {
         data.getCustomers().add(customer);
+    }
+
+    public void addCart(Cart cart){
+        data.getCarts().add(cart);
     }
 
     public void removeCustomer(Customer customer){

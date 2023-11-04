@@ -10,6 +10,11 @@ public class CartItem extends Product {
         this.quantity = quantity;
     }
 
+    public String getProduct(){
+        return super.name;
+    }
+
+
     public void setQuantity(Integer quantity){
         this.quantity = quantity;
     }

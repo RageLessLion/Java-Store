@@ -35,9 +35,6 @@ public class Product {
         this.availableQuantity = availableQuantity;
     }
 
-    //    public Integer howManyProductsInCart(){
-//
-//    }
 
 
 }
