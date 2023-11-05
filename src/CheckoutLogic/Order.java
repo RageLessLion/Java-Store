@@ -18,14 +18,18 @@ public class Order {
     public Order(Customer customer){
         this.customer = customer;
         this.products = new ArrayList<>();
-        for(CartItem cartItem : customer.getCart().getCartItems())
+        for(CartItem cartItem : customer.getCart().getCartItems()) {
             this.products.add(cartItem.getProduct());
+            this.total = cartItem.getProductPrice() * cartItem.getQuantity();
+        }
         this.total = 0;
+    }
+
+    public Customer getCustomer() {
+        return customer;
     }
 
     public ArrayList<String> getProducts() {
         return products;
     }
-
-    //todo:test Order functionality
 }

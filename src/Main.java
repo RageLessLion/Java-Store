@@ -43,12 +43,5 @@ public class Main {
         Order order = new Order(customer1);
         System.out.print(order.getProducts());
 
-
-
-//        admin.sortCustomersByCartQty();
-//        admin.traverseCustomers();
-//        for(Cart cartIndex : data.getCarts()){
-//            System.out.println(cartIndex.getCartItems());
-//        }
     }
 }

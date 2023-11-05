@@ -14,6 +14,8 @@ public class CartItem extends Product {
         return super.name;
     }
 
+    public Integer getProductPrice() { return super.price;}
+
 
     public void setQuantity(Integer quantity){
         this.quantity = quantity;

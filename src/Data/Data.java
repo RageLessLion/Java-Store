@@ -16,7 +16,6 @@ public class Data {
     public Data(){
         Customers = new ArrayList<>();
         Carts = new ArrayList<>();
-        Carts = new ArrayList<>();
     }
 
     public ArrayList<Customer> getCustomers() {
